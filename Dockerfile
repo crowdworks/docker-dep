@@ -25,4 +25,4 @@ WORKDIR ${APP_DIR}
 USER go
 
 RUN set -x \
-    && go get -u github.com/golang/dep/... \
+    && go get -u github.com/golang/dep/...
