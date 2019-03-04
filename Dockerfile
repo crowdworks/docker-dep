@@ -1,11 +1,17 @@
 FROM golang:1.8.3-alpine
 
+# To use as custom-build docker images, 
+# container image must have installed following tools: 
+#  git, ssh, tar, gzip, ca-certificates
+# https://circleci.com/docs/2.0/custom-images/
 RUN set -x \
     && apk add --no-cache \
     git \
-    build-base \
+    openssh-client \
     tar \
     gzip \
+    ca-certificates \
+    build-base \
     curl \
     py-pip
 
